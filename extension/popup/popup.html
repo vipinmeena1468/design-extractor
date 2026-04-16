@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DESIGN.md Extractor & Skill Generator</title>
+  <link rel="stylesheet" href="./popup.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <img src="../assets/icons/icon32.png" width="24" height="24" alt="App logo" />
+        <div>
+          <h1>DESIGN.md Extractor & Skill Generator</h1>
+          <p>Auto-generates from the active tab based on DESIGN.md
+            specifications.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="mode-switch" aria-label="Output mode">
+      <button id="designModeBtn" type="button" data-mode="design" class="mode-btn is-active">
+        DESIGN.md
+      </button>
+      <button id="skillModeBtn" type="button" data-mode="skill" class="mode-btn">
+        SKILL.md
+      </button>
+    </section>
+
+
+    <p id="status" class="status" hidden></p>
+    <ul id="issues" class="issues"></ul>
+
+    <section id="helpPanel" class="help-panel" hidden>
+      <div class="help-header">
+        <h2>How This Was Generated</h2>
+        <button id="closeHelpBtn" type="button" class="help-close">Close</button>
+      </div>
+      <div id="helpContent" class="help-content"></div>
+    </section>
+
+    <section class="preview-wrap">
+      <label for="preview">Generated Markdown</label>
+      <div class="textarea-container">
+        <textarea id="preview" readonly></textarea>
+        <div class="preview-actions">
+          <button id="copyBtn" type="button" class="icon-btn" disabled aria-label="Copy to clipboard">
+            <svg class="icon-copy" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg class="icon-success" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
+          <button id="downloadBtn" type="button" class="icon-btn" disabled aria-label="Download">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
+          <button id="refreshBtn" type="button" class="icon-btn" aria-label="Refresh">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </button>
+          <button id="helpBtn" type="button" class="icon-btn" aria-label="Info">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script type="module" src="./popup.js"></script>
+</body>
+
+</html>

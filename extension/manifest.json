@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "DESIGN.md Extractor & Skill Generator",
+  "short_name": "Design Extractor",
+  "description": "Extract design tokens from any website and use in your workflow.",
+  "author": "OpenSource Git Repo",
+  "version": "0.2.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "downloads"
+  ],
+  "action": {
+    "default_title": "DESIGN.md Extractor & Skill Generator",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

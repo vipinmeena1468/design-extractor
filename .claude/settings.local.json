@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/Users/vipinmeena/Desktop/02 Areas/05 Dev-self/Design-md Chrome Extension/\" status)"
+    ]
+  }
+}
